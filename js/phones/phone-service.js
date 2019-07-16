@@ -2,7 +2,7 @@ const PhoneService = {
 
   async getAll({ sortBy='age', query='', page='', perPage='' } = {}) {
 
-    const url = `https://mgrinko.github.io/js-20181206/phones/phones.json`;
+    const url = `https://kapush.github.io/phone-shop/phones/phones.json`;
     const phones = await this._sendRequest(url);
     
     const phonesFiltered = this._filterPhones(phones, query);
@@ -10,7 +10,7 @@ const PhoneService = {
   },
 
   getById(phoneId) {
-    const url = `https://mgrinko.github.io/js-20181206/phones/${ phoneId }.json`;
+    const url = `https://kapush.github.io/phone-shop/phones/${ phoneId }.json`;
     return this._sendRequest(url);
   },
 
