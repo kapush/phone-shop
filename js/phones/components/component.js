@@ -25,7 +25,7 @@ export default class Component {
         });
     }
 
-    //обертка для addEventListener , чтоб не дублировать код. Это делегирование
+    //обертка для addEventListener , чтоб не дублировать код. 
     on(eventName, elementToListen, callback){
         this._element.addEventListener(eventName, (event)=>{
             const delegateTarget = event.target.closest(`[data-element="${elementToListen}"]`);
